@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #myVideo, #img {
+        #myVideo{
             width: 100vw;
             height: 100vh;
             object-fit: cover;
@@ -15,7 +15,7 @@
             left: 0;
             z-index: -1;
       }
-      #myVideo2 {
+        #myVideo2 {
             width: 100vw;
             height: 100vh;
             object-fit: cover;
@@ -24,12 +24,6 @@
             left: 0;
             
       }
-      /*body {
-        background-image: url("render_buono2_Moment.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }*/
       
       /* Add some content at the bottom of the video/page */
       .content {
@@ -60,22 +54,17 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-    <div id="box"></div>
-    <!--<img src="rendere_buono_Moment.jpg" id="img">-->
-    
-    
     <!-- The video -->
   <video preload="auto" muted id="myVideo">
-    <source src="evviva.mp4" type="video/mp4">
+    <source src="primo_video.mp4" type="video/mp4">
   </video>
   
   <video preload="auto" muted id="myVideo2" style="z-index: -2;">
-    <source src="evviva2.mp4" type="video/mp4">
+    <source src="secondo_video.mp4" type="video/mp4">
   </video>
   
   <!-- Optional: some overlay text to describe the video -->
   <div class="content">
-    <!-- Use a button to pause/play the video with JavaScript -->
     <button class="myBtn" onclick="myFunction()">Premi prima qui</button>
     <button class="myBtn" onclick="myFunction2()">Poi premi qui</button>
   </div>
