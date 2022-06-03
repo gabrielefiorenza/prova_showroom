@@ -35,7 +35,7 @@ video {
 
 
 
-#button_class1{
+#button_start_to_soggiorno{
   opacity: 0.9;
   position: fixed;
   bottom: 500px;
@@ -49,7 +49,7 @@ video {
   border-radius: 4px;
 }
 
-#button_class1 button {
+#button_start_to_soggiorno button {
   width: 100px;
   height: 100px;
 }
@@ -57,7 +57,7 @@ video {
 
 
 
-#button_class2{
+#button_soggiorno_to_sofa{
   opacity: 0.9;
   position: fixed;
   bottom: 250px;
@@ -71,7 +71,7 @@ video {
   border-radius: 4px;
 }
 
-#button_class2 button {
+#button_soggiorno_to_sofa button {
   width: 100px;
   height: 100px;
 }
@@ -79,7 +79,7 @@ video {
 
 
 
-#button_class3{
+#button_soggiorno_to_TV{
   opacity: 0.9;
   position: fixed;
   bottom: 400px;
@@ -94,7 +94,7 @@ video {
 
 }
 
-#button_class3 button {
+#button_soggiorno_to_TV button {
   width: 100px;
   height: 100px;
 }
@@ -103,7 +103,7 @@ video {
 
 
 
-#button_class4{
+#button_soggiorno_to_book{
   opacity: 0.9;
   position: fixed;
   bottom: 600px;
@@ -118,14 +118,14 @@ video {
 
 }
 
-#button_class4 button {
+#button_soggiorno_to_book button {
   width: 100px;
   height: 100px;
 }
 
 
 
-#button_class5{
+#button_sofa_to_kitchen{
   opacity: 0.9;
   position: fixed;
   bottom: 600px;
@@ -140,14 +140,14 @@ video {
 
 }
 
-#button_class5 button {
+#button_sofa_to_kitchen button {
   width: 100px;
   height: 100px;
 }
 
 
 
-#button_class6{
+#button_sofa_to_book{
   opacity: 0.9;
   position: fixed;
   bottom: 200px;
@@ -162,14 +162,14 @@ video {
 
 }
 
-#button_class6 button {
+#button_sofa_to_book button {
   width: 100px;
   height: 100px;
 }
 
 
 
-#button_class7{
+#button_sofa_to_TV{
   opacity: 0.9;
   position: fixed;
   bottom: 200px;
@@ -184,14 +184,14 @@ video {
 
 }
 
-#button_class7 button {
+#button_sofa_to_TV button {
   width: 100px;
   height: 100px;
 }
 
 
 
-#box_info {
+#box_info_soggiorno {
   width: 320px;
   padding: 10px;
   border: 2px solid gray;
@@ -206,7 +206,7 @@ video {
 }
 
 
-#box_info2 {
+#box_info_sofa {
   width: 320px;
   padding: 10px;
   border: 2px solid gray;

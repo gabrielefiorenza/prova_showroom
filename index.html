@@ -10,11 +10,11 @@
 </head>
 <body>
     <div id="main">
-        
+        <!--Stazioni-->
         <div id="start">
             <img id="frame_start" src="Assets\Frames\FrameStart.webp">
             
-            <button id="button_class1">
+            <button id="button_start_to_soggiorno">
                 Go to the Living Room
             </button>
         </div>
@@ -22,21 +22,21 @@
         
         <div id="soggiorno">
             <img id="frame_soggiorno" src="Assets\Frames\FrameSoggiorno.webp">
-            <button id="button_class2">
+            <button id="button_soggiorno_to_sofa">
                 Go to the sofa
             </button>
             
             
-            <button id="button_class3">
+            <button id="button_soggiorno_to_TV">
                 Go to the TV
             </button>
             
             
-            <button id="button_class4">
+            <button id="button_soggiorno_to_book">
                 Go to book shelving
             </button>
 
-            <div id="box_info">
+            <div id="box_info_soggiorno">
                 This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
             </div>
             
@@ -47,28 +47,28 @@
         <div id="sofa">
             <img id="frame_sofa" src="Assets\Frames\FrameSofa.webp">
             
-            <button id="button_class5">
+            <button id="button_sofa_to_kitchen">
                 Go to the kitchen
             </button>
             
             
-            <button id="button_class6">
+            <button id="button_sofa_to_book">
                 Go to the book shelving
             </button>
             
             
-            <button id="button_class7">
+            <button id="button_sofa_to_TV">
                 Go to the TV
             </button>
 
-            <div id="box_info2">
+            <div id="box_info_sofa">
                 This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
             </div>
             
         </div>
         
         
-
+        <!--Next Video Containers-->
         <div id="next_video1" >
             <video id="video1"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
         </div>
@@ -106,7 +106,7 @@
         $("#soggiorno").hide()
         $("#sofa").hide()
 
-        $("#button_class1").click(function(){
+        $("#button_start_to_soggiorno").click(function(){
             $.get("Assets/Video/VideoSequence2 1080p.mp4", function(){
                 $(' <video id="video2"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
             });
@@ -124,7 +124,7 @@
               
         });
 
-        $("#button_class2").click(function(){
+        $("#button_soggiorno_to_sofa").click(function(){
             $.get("Assets/Video/VideoSequence8 1080p.mp4", function(){
                 $(' <video id="video8"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
             });
