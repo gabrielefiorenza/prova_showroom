@@ -23,39 +23,12 @@ img {
 
 
 
-#video1 {
+video {
   position: absolute;
   width: 100vw;
   height: 100vh;
   margin: 0;
   z-index: -1;
-  object-fit: fill;
-
-}
-#video2 {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  z-index: -2;
-  object-fit: fill;
-
-}
-#video3 {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  z-index: -2;
-  object-fit: fill;
-
-}
-#video4 {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  z-index: -2;
   object-fit: fill;
 
 }
@@ -151,6 +124,73 @@ img {
 }
 
 
+
+#button_class5{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 600px;
+  right: 800px;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(133, 116, 116);
+  border-radius: 4px;
+
+}
+
+#button_class5 button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_class6{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 200px;
+  left: 200px;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(185, 50, 50);
+  border-radius: 4px;
+
+}
+
+#button_class6 button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_class7{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 200px;
+  right: 200px;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 4px;
+
+}
+
+#button_class7 button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
 #box_info {
   width: 320px;
   padding: 10px;
@@ -166,6 +206,16 @@ img {
 }
 
 
-#next_image{
-
+#box_info2 {
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: aliceblue;
+  opacity: 0.9;
+  border-radius: 4px;
+  z-index: 0;
+  position: fixed;
+  bottom: 500px;
+  right: 100px;
 }

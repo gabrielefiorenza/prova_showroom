@@ -11,35 +11,28 @@
 <body>
     <div id="main">
         
-        <div id="sequence1">
-            <img id="image1" src="Assets\Frames\StartFrameSequence1.webp">
+        <div id="start">
+            <img id="frame_start" src="Assets\Frames\FrameStart.webp">
             
             <button id="button_class1">
                 Go to the Living Room
             </button>
         </div>
-
-        <div id="next_image"></div>
-        <div id="next_video1" ></div>
-        <div id="next_video2" ></div>
-        <div id="next_video3" ></div>
         
-        <!--
-        <div id="sequence2">
-            
-            <img id="image2" src="Assets\Frames\StartFrameSequence2.webp">
-            
-            <button id="button_class2" onclick="playPause2()">
+        
+        <div id="soggiorno">
+            <img id="frame_soggiorno" src="Assets\Frames\FrameSoggiorno.webp">
+            <button id="button_class2">
                 Go to the sofa
             </button>
             
             
-            <button id="button_class3" onclick="playPause3()">
+            <button id="button_class3">
                 Go to the TV
             </button>
             
             
-            <button id="button_class4" onclick="playPause4()">
+            <button id="button_class4">
                 Go to book shelving
             </button>
 
@@ -48,38 +41,42 @@
             </div>
             
         </div>
-        -->
+
+
+
+        <div id="sofa">
+            <img id="frame_sofa" src="Assets\Frames\FrameSofa.webp">
+            
+            <button id="button_class5">
+                Go to the kitchen
+            </button>
+            
+            
+            <button id="button_class6">
+                Go to the book shelving
+            </button>
+            
+            
+            <button id="button_class7">
+                Go to the TV
+            </button>
+
+            <div id="box_info2">
+                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+            </div>
+            
+        </div>
+        
         
 
-
-        
-        <video id="video1">
-
-            <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4">
-
-        </video>
-        <!--
-        
-        <video id="video2">
-
-            <source src="Assets\Video\VideoSequence2 1080p.mp4" type="video/mp4">
-
-        </video>
+        <div id="next_video1" >
+            <video id="video1"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
+        </div>
+        <div id="next_video2" ></div>
+        <div id="next_video3" ></div>
         
         
-        <video id="video3">
-
-            <source src="Assets\Video\VideoSequence3 1080p.mp4" type="video/mp4">
-
-        </video>
         
-        
-        <video id="video4">
-
-            <source src="Assets\Video\VideoSequence4 1080p.mp4" type="video/mp4">
-
-        </video>
-        -->
     </div>   
     
 
@@ -88,54 +85,28 @@
 </body>
 
 <script> 
-    var myVideo1 = document.getElementById("video1"); 
-    var myVideo2 = document.getElementById("video2"); 
-    var myVideo3 = document.getElementById("video3"); 
-    var myVideo4 = document.getElementById("video4");
-    var sequence1 = document.getElementById("sequence1")
-    
-    function DestroySeq1() {
-        myVideo1.remove();
-        sequence1.remove();
+    function FromStartToSoggiorno() {
+        $("#video1").remove();
+        $("#start").hide();
+        $("#soggiorno").show();
     }
 
-    
+    function FromSoggiornoToSofa(){
+        $("#video2").remove();
+        $("#video3").remove();
+        $("#video4").remove();
+        $("#soggiorno").hide();
+        $("#sofa").show();
+    }
 
-    function playPause2() { 
-      if (myVideo2.paused) {
-        document.getElementById("video2").style.zIndex = "3";
-        myVideo2.play();
-      }
-        
-      else 
-        myVideo2.pause();
-    }
-    function playPause3() { 
-      if (myVideo3.paused) {
-        document.getElementById("video3").style.zIndex = "3";
-        myVideo3.play();
-      }
-        
-      else 
-        myVideo3.pause();
-    }
-    function playPause4() { 
-      if (myVideo4.paused) {
-        document.getElementById("video4").style.zIndex = "3";
-        myVideo4.play();
-      }
-        
-      else 
-        myVideo4.pause();
-    }
+
 
 
     $(document).ready(function(){
+        $("#soggiorno").hide()
+        $("#sofa").hide()
 
         $("#button_class1").click(function(){
-            $.get("Assets/Frames/StartFrameSequence2.webp", function(){
-                $(' <img  src="Assets/Frames/StartFrameSequence2.webp"> ').appendTo("#next_image");
-            });
             $.get("Assets/Video/VideoSequence2 1080p.mp4", function(){
                 $(' <video id="video2"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
             });
@@ -147,11 +118,30 @@
             });
             
             
-            $("#video1").css("z-index", "2")
-            myVideo1.play();
-            setTimeout(DestroySeq1,5000);
+            $("#video1").css("z-index", "1")
+            $('#video1').get(0).play()
+            setTimeout(FromStartToSoggiorno,5000);
               
         });
+
+        $("#button_class2").click(function(){
+            $.get("Assets/Video/VideoSequence8 1080p.mp4", function(){
+                $(' <video id="video8"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
+            });
+            $.get("Assets/Video/VideoSequence9 1080p.mp4", function(){
+                $(' <video id="video9"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
+            });
+            $.get("Assets/Video/VideoSequence5 1080p.mp4", function(){
+                $(' <video id="video5"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
+            });
+            
+            
+            $("#video2").css("z-index", "1")
+            $('#video2').get(0).play()
+            setTimeout(FromSoggiornoToSofa,5000);
+
+        });
+            
 
     });
     </script> 
