@@ -69,7 +69,7 @@
         
         
         <!--Next Video Containers-->
-        <video id="video1"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
+        <video id="video1" preload="auto"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
         
         <div id="next_video1" ></div>
             
@@ -115,17 +115,17 @@
             
             $.get("Assets/Video/VideoSequence2 1080p.mp4", function(){
                 console.log("video 2 caricato");
-                $(' <video id="video2"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
+                $(' <video id="video2" preload="auto"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
             });
            
             $.get("Assets/Video/VideoSequence3 1080p.mp4", function(){
                 console.log("video 3 caricato");
-                $(' <video id="video3"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
+                $(' <video id="video3" preload="auto"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
             });
 
             $.get("Assets/Video/VideoSequence4 1080p.mp4", function(){
                 console.log("video 4 caricato");
-                $(' <video id="video4"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
+                $(' <video id="video4" preload="auto"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
             });
             
             
@@ -137,13 +137,13 @@
 
         $("#button_soggiorno_to_sofa").click(function(){
             
-            $(' <video id="video8"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
+            $(' <video id="video8" preload="auto"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
            
           
-            $(' <video id="video9"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
+            $(' <video id="video9" preload="auto"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
            
          
-            $(' <video id="video5"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
+            $(' <video id="video5" preload="auto"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
            
             
             
