@@ -113,14 +113,20 @@
 
         $("#button_start_to_soggiorno").click(function(){
             
-            $(' <video id="video2"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
-        
+            $.get("Assets/Video/VideoSequence2 1080p.mp4", function(){
+                alert("video 2 caricato");
+                $(' <video id="video2"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
+            });
            
-            $(' <video id="video3"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
-        
+            $.get("Assets/Video/VideoSequence3 1080p.mp4", function(){
+                alert("video 3 caricato");
+                $(' <video id="video3"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
+            });
 
-            $(' <video id="video4"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
-    
+            $.get("Assets/Video/VideoSequence4 1080p.mp4", function(){
+                alert("video 4 caricato");
+                $(' <video id="video4"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
+            });
             
             
             $("#video1").css("z-index", "1")
