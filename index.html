@@ -69,11 +69,15 @@
         
         
         <!--Next Video Containers-->
-        <div id="next_video1" >
-            <video id="video1"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
-        </div>
+        <video id="video1"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
+        
+        <div id="next_video1" ></div>
+            
         <div id="next_video2" ></div>
         <div id="next_video3" ></div>
+        <div id="next_video4" ></div>
+        <div id="next_video5" ></div>
+        <div id="next_video6" ></div>
         
         
         
@@ -89,6 +93,7 @@
         $("#video1").remove();
         $("#start").hide();
         $("#soggiorno").show();
+            
     }
 
     function FromSoggiornoToSofa(){
@@ -107,15 +112,15 @@
         $("#sofa").hide()
 
         $("#button_start_to_soggiorno").click(function(){
-            $.get("Assets/Video/VideoSequence2 1080p.mp4", function(){
-                $(' <video id="video2"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
-            });
-            $.get("Assets/Video/VideoSequence3 1080p.mp4", function(){
-                $(' <video id="video3"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
-            });
-            $.get("Assets/Video/VideoSequence4 1080p.mp4", function(){
-                $(' <video id="video4"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
-            });
+            
+            $(' <video id="video2"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
+        
+           
+            $(' <video id="video3"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
+        
+
+            $(' <video id="video4"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
+    
             
             
             $("#video1").css("z-index", "1")
@@ -125,15 +130,15 @@
         });
 
         $("#button_soggiorno_to_sofa").click(function(){
-            $.get("Assets/Video/VideoSequence8 1080p.mp4", function(){
-                $(' <video id="video8"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
-            });
-            $.get("Assets/Video/VideoSequence9 1080p.mp4", function(){
-                $(' <video id="video9"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
-            });
-            $.get("Assets/Video/VideoSequence5 1080p.mp4", function(){
-                $(' <video id="video5"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
-            });
+            
+            $(' <video id="video8"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
+           
+          
+            $(' <video id="video9"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
+           
+         
+            $(' <video id="video5"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
+           
             
             
             $("#video2").css("z-index", "1")
