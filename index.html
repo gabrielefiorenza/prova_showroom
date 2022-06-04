@@ -67,12 +67,34 @@
             
         </div>
         
-        
+        <div id="cucina">
+            <img id="frame_cucina" src="Assets\Frames\FrameCucina.webp">
+            
+            <button id="button_cucina_to_sink">
+                Go to the sink
+            </button>
+            
+            
+            <button id="button_cucina_to_table">
+                Go to the table
+            </button>
+            
+            
+            <button id="button_cucina_to_stove">
+                Go to the stove
+            </button>
+
+            <div id="box_info_cucina">
+                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+            </div>
+            
+        </div>
+
+
         <!--Next Video Containers-->
         <video id="video1" preload="auto"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
         
         <div id="next_video1" ></div>
-            
         <div id="next_video2" ></div>
         <div id="next_video3" ></div>
         <div id="next_video4" ></div>
@@ -104,12 +126,20 @@
         $("#sofa").show();
     }
 
+    function FromSofaToCucina(){
+        $("#video8").remove();
+        $("#video9").remove();
+        $("#video5").remove();
+        $("#sofa").hide();
+        $("#cucina").show();
+    }
 
 
 
     $(document).ready(function(){
         $("#soggiorno").hide()
         $("#sofa").hide()
+        $("#cucina").hide()
 
         $("#button_start_to_soggiorno").click(function(){
             
@@ -136,15 +166,27 @@
         });
 
         $("#button_soggiorno_to_sofa").click(function(){
-            
-            $(' <video id="video8" preload="auto"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
+            if ($("#next_video1").html()){
+                $(' <video id="video8" preload="auto"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
        
           
-            $(' <video id="video9" preload="auto"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
+                $(' <video id="video9" preload="auto"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
     
          
-            $(' <video id="video5" preload="auto"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
+                $(' <video id="video5" preload="auto"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
  
+            }
+            
+            else {
+                $(' <video id="video8" preload="auto"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
+       
+          
+                $(' <video id="video9" preload="auto"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
+    
+         
+                $(' <video id="video5" preload="auto"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
+ 
+            }
             
             
             $("#video2").css("z-index", "1")
@@ -155,9 +197,30 @@
             
 
         $("#button_sofa_to_kitchen").click(function(){
+            if ($("#next_video1").html()){
+                $(' <video id="video11" preload="auto"> <source src="Assets/Video/VideoSequence11 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
+       
+          
+                $(' <video id="video12" preload="auto"> <source src="Assets/Video/VideoSequence12 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
+    
+         
+                $(' <video id="video13" preload="auto"> <source src="Assets/Video/VideoSequence13 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
+ 
+            }
+            
+            else {
+                $(' <video id="video11" preload="auto"> <source src="Assets/Video/VideoSequence11 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
+       
+          
+                $(' <video id="video12" preload="auto"> <source src="Assets/Video/VideoSequence12 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
+    
+         
+                $(' <video id="video13" preload="auto"> <source src="Assets/Video/VideoSequence13 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
+ 
+            }
             $("#video8").css("z-index", "1")
             $('#video8').get(0).play()
-            
+            setTimeout(FromSofaToCucina,5000);
         });
 
     });

@@ -219,3 +219,84 @@ video {
   bottom: 500px;
   right: 100px;
 }
+
+
+#button_cucina_to_stove{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 200px;
+  right: 200px;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(133, 116, 116);
+  border-radius: 4px;
+
+}
+
+#button_cucina_to_stove button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_cucina_to_sink{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 300px;
+  left: 650px;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(185, 50, 50);
+  border-radius: 4px;
+
+}
+
+#button_cucina_to_sink button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_cucina_to_table{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 200px;
+  left: 400px;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 4px;
+
+}
+
+#button_cucina_to_table button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#box_info_cucina {
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: aliceblue;
+  opacity: 0.9;
+  border-radius: 4px;
+  z-index: 0;
+  position: fixed;
+  bottom: 400px;
+  right: 100px;
+}
