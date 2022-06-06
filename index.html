@@ -111,6 +111,13 @@
 </body>
 
 <script> 
+    const video = document.querySelector('#video1');
+
+    video.addEventListener('canplaythrough', (event) => {
+        console.log('I think I can play through the entire ' +
+      'video without ever having to stop to buffer.');
+    });
+
     function FromStartToSoggiorno() {
         $("#video1").remove();
         $("#start").hide();
