@@ -248,6 +248,13 @@
     var idVideo14 = "video14";
     var idVideo15 = "video15";
     var idVideo16 = "video16";
+    var idVideo17 = "video17";
+    var idVideo18 = "video18";
+    var idVideo19 = "video19";
+    var idVideo20 = "video20";
+    var idVideo21 = "video21";
+    var idVideo22 = "video22";
+
 
     var idStationStart = "start";
     var idStationBookShelver = "book_shelver";
@@ -275,7 +282,13 @@
     var tagVideo14= ' <video id="video14" preload="auto"> <source src="Assets/Video/VideoSequence14 1080p.mp4" type="video/mp4"></video> ';
     var tagVideo15= ' <video id="video15" preload="auto"> <source src="Assets/Video/VideoSequence15 1080p.mp4" type="video/mp4"></video> ';
     var tagVideo16= ' <video id="video16" preload="auto"> <source src="Assets/Video/VideoSequence16 1080p.mp4" type="video/mp4"></video> ';
-
+    var tagVideo17= ' <video id="video17" preload="auto"> <source src="Assets/Video/VideoSequence17 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo18= ' <video id="video18" preload="auto"> <source src="Assets/Video/VideoSequence18 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo19= ' <video id="video19" preload="auto"> <source src="Assets/Video/VideoSequence19 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo20= ' <video id="video20" preload="auto"> <source src="Assets/Video/VideoSequence20 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo21= ' <video id="video21" preload="auto"> <source src="Assets/Video/VideoSequence21 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo22= ' <video id="video22" preload="auto"> <source src="Assets/Video/VideoSequence22 1080p.mp4" type="video/mp4"></video> ';
+    
 
     
 
@@ -292,20 +305,6 @@
     }
     
     
-//    var video=document.getElementById("video1");
-//    video.currentTime=4
-//   function playBackwards() {
-//        var fps = 30;
-//      var intervalRewind = setInterval(function() {
-//      if(video.currentTime == 0){
-//         clearInterval(intervalRewind);
-//         video.pause();
-//      }
-//      else {
-//          video.currentTime += -(1/fps);
-//      }
-//      }, 1000 / fps);
-//  }
 
 
     
@@ -440,27 +439,77 @@
 
         $("#button_start_to_soggiorno").click(function(){
             button1Clicked();
- //           playBackwards();      
+   
         });
+
 
 
         $("#button_soggiorno_to_sofa").click(function() {
-            ButtonClicked (video_mid_canplay, tagVideo8, tagVideo9, tagVideo5, idVideo8, idVideo9, idVideo5, idVideo2,idVideo3,idVideo4,idStationSoggiorno,idStationSofa);
+            ButtonClicked (video_mid_canplay, tagVideo8, tagVideo9, tagVideo17, idVideo8, idVideo9, idVideo17, idVideo2,idVideo3,idVideo4,idStationSoggiorno,idStationSofa);
         });   
-            
-
-        $("#button_sofa_to_kitchen").click(function(){
-            ButtonClicked(video_mid_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo12, idVideo13, idVideo8, idVideo9,idVideo5, idStationSofa, idStationCucina);
-        });
-
+        
         $("#button_soggiorno_to_TV").click(function(){
             ButtonClicked(video_sx_canplay, tagVideo5, tagVideo6, tagVideo7, idVideo5, idVideo6, idVideo7, idVideo3, idVideo2,idVideo4, idStationSoggiorno, idStationTV);
         });
         
         $("#button_soggiorno_to_book").click(function(){
-            ButtonClicked(video_dx_canplay, tagVideo9, tagVideo7, tagVideo10, idVideo9, idVideo7, idVideo10, idVideo4, idVideo2,idVideo3, idStationSoggiorno, idStationBookShelver);
+            ButtonClicked(video_dx_canplay, tagVideo18, tagVideo10, tagVideo19, idVideo19, idVideo18, idVideo10, idVideo4, idVideo2,idVideo3, idStationSoggiorno, idStationBookShelver);
+        });  
+
+
+
+        $("#button_sofa_to_kitchen").click(function(){
+            ButtonClicked(video_mid_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo13, idVideo12, idVideo8, idVideo9,idVideo5, idStationSofa, idStationCucina);
         });
-    
+
+        $("#button_sofa_to_book").click(function(){
+            ButtonClicked(video_sx_canplay, tagVideo18, tagVideo10, tagVideo19, idVideo19, idVideo18, idVideo10, idVideo9, idVideo17,idVideo8, idStationSofa, idStationBookShelver);
+        });
+        
+        $("#button_sofa_to_TV").click(function(){
+            ButtonClicked(video_dx_canplay, tagVideo5, tagVideo6, tagVideo7, idVideo5, idVideo6, idVideo7, idVideo17, idVideo9,idVideo8, idStationSofa, idStationTV);
+        });
+
+
+
+        $("#button_TV_to_book").click(function(){
+            ButtonClicked(video_dx_canplay, tagVideo18, tagVideo10, tagVideo19, idVideo19, idVideo18, idVideo10, idVideo7, idVideo6,idVideo5, idStationTV, idStationBookShelver);
+        });
+
+        $("#button_TV_to_kitchen").click(function(){
+            ButtonClicked(video_sx_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo13, idVideo12, idVideo6, idVideo5,idVideo7, idStationTV, idStationCucina);
+        });
+
+        $("#button_TV_to_sofa").click(function(){
+            ButtonClicked(video_mid_canplay, tagVideo8, tagVideo9, tagVideo5, idVideo8, idVideo9, idVideo5, idVideo5, idVideo6,idVideo7, idStationTV, idStationSofa);
+        });
+
+
+        $("#button_book_shelver_to_cucina").click(function(){
+            ButtonClicked(video_dx_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo13, idVideo12, idVideo10, idVideo18,idVideo19, idStationBookShelver, idStationCucina);
+        });
+
+        $("#button_book_shelver_to_sofa").click(function(){
+            ButtonClicked(video_mid_canplay, tagVideo8, tagVideo9, tagVideo17, idVideo8, idVideo9, idVideo17, idVideo18, idVideo10,idVideo19, idStationBookShelver, idStationSofa);
+        });
+
+        $("#button_book_shelver_to_TV").click(function(){
+            ButtonClicked(video_sx_canplay, tagVideo5, tagVideo6, tagVideo7, idVideo5, idVideo6, idVideo7, idVideo19, idVideo10,idVideo18, idStationBookShelver, idStationTV);
+        });
+       
+
+        $("#button_cucina_to_table").click(function(){
+            ButtonClicked(video_sx_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo13, idVideo12, idVideo10, idVideo18,idVideo19, idStationBookShelver, idStationCucina);
+        });
+
+        $("#button_cucina_to_sink").click(function(){
+            ButtonClicked(video_mid_canplay, tagVideo8, tagVideo9, tagVideo17, idVideo8, idVideo9, idVideo17, idVideo18, idVideo10,idVideo19, idStationBookShelver, idStationSofa);
+        });
+
+        $("#button_cucina_to_stove").click(function(){
+            ButtonClicked(video_dx_canplay, tagVideo5, tagVideo6, tagVideo7, idVideo5, idVideo6, idVideo7, idVideo19, idVideo10,idVideo18, idStationBookShelver, idStationTV);
+        });
+        
     
     
     
