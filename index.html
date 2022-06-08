@@ -116,6 +116,53 @@
     var video_mid_canplay= false;
     var video_dx_canplay= false;
 
+    var idVideo1 = "video1";
+    var idVideo2 = "video2";
+    var idVideo3 = "video3";
+    var idVideo4 = "video4";
+    var idVideo5 = "video5";
+    var idVideo6 = "video6";
+    var idVideo7 = "video7";
+    var idVideo8 = "video8";
+    var idVideo9 = "video9";
+    var idVideo10 = "video10";
+    var idVideo11= "video11";
+    var idVideo12 = "video12";
+    var idVideo13 = "video13";
+    var idVideo14 = "video14";
+    var idVideo15 = "video15";
+    var idVideo16 = "video16";
+
+    var idStationStart = "start";
+    var idStationBookShelver = "book_shelver";
+    var idStationCucina = "cucina";
+    var idStationSink = "sink";
+    var idStationSofa = "sofa";
+    var idStationSoggiorno = "soggiorno";
+    var idStationStove = "stove";
+    var idStationTable = "table";
+    var idStationTV = "TV";
+
+    var tagVideo1= ' <video id="video1" preload="auto"> <source src="Assets/Video/VideoSequence1 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo2= ' <video id="video2" preload="auto"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo3= ' <video id="video3" preload="auto"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo4= ' <video id="video4" preload="auto"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo5= ' <video id="video5" preload="auto"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo6= ' <video id="video6" preload="auto"> <source src="Assets/Video/VideoSequence6 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo7= ' <video id="video7" preload="auto"> <source src="Assets/Video/VideoSequence7 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo8= ' <video id="video8" preload="auto"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo9= ' <video id="video9" preload="auto"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo10= ' <video id="video10" preload="auto"> <source src="Assets/Video/VideoSequence10 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo11= ' <video id="video11" preload="auto"> <source src="Assets/Video/VideoSequence11 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo12= ' <video id="video12" preload="auto"> <source src="Assets/Video/VideoSequence12 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo13= ' <video id="video13" preload="auto"> <source src="Assets/Video/VideoSequence13 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo14= ' <video id="video14" preload="auto"> <source src="Assets/Video/VideoSequence14 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo15= ' <video id="video15" preload="auto"> <source src="Assets/Video/VideoSequence15 1080p.mp4" type="video/mp4"></video> ';
+    var tagVideo16= ' <video id="video16" preload="auto"> <source src="Assets/Video/VideoSequence16 1080p.mp4" type="video/mp4"></video> ';
+
+
+    
+
     $("#video1").on('canplaythrough', function() {
         video_mid_canplay=true;
         console.log('I think I can play video 1');
@@ -128,20 +175,120 @@
             
     }
 
-    function FromSoggiornoToSofa(){
-        $("#video2").remove();
-        $("#video3").remove();
-        $("#video4").remove();
-        $("#soggiorno").hide();
-        $("#sofa").show();
+    
+    function SwitchStation(video1, video2,video3,station1,station2){
+        $("#" +video1).remove();
+        $("#" +video2).remove();
+        $("#" +video3).remove();
+        $("#" +station1).hide();
+        $("#" +station2).show();
     }
 
-    function FromSofaToCucina(){
-        $("#video8").remove();
-        $("#video9").remove();
-        $("#video5").remove();
-        $("#sofa").hide();
-        $("#cucina").show();
+    function SetVideoCanPlayFalse() {
+        video_sx_canplay= false;
+        video_mid_canplay= false;
+        video_dx_canplay= false;
+    }
+
+
+    function ButtonClicked (VideoCanPlay, videoTag1, videoTag2, videoTag3, idVideomid, idVideosx, idVideodx, idVideoToPlay, idPrevVideo2, idPrevVideo3, idPrevSection,idNewSection) {
+        if (VideoCanPlay) {
+                SetVideoCanPlayFalse();
+            
+
+                if ($("#next_video1").html()){
+                    
+                    $(videoTag1).appendTo("#next_video4");
+                    $(videoTag2).appendTo("#next_video5");
+                    $(videoTag3).appendTo("#next_video6");
+
+
+                    $("#"+idVideomid).on('canplaythrough', function() {
+                        video_mid_canplay=true;
+                        console.log('I think I can play video mic');
+                    });
+            
+                    $("#"+idVideosx).on('canplaythrough', function() {
+                        video_sx_canplay=true;
+                        console.log('I think I can play videosx');
+                    });
+            
+                    $("#"+idVideodx).on('canplaythrough', function() {
+                        video_dx_canplay=true;
+                        console.log('I think I can play videodx');
+                    });
+                }
+                
+                else {
+                    $(videoTag1).appendTo("#next_video1");
+                    $(videoTag2).appendTo("#next_video2");
+                    $(videoTag3).appendTo("#next_video3");
+
+
+                    $("#"+idVideomid).on('canplaythrough', function() {
+                        video_mid_canplay=true;
+                        console.log('I think I can play video mic');
+                    });
+            
+                    $("#"+idVideosx).on('canplaythrough', function() {
+                        video_sx_canplay=true;
+                        console.log('I think I can play videosx');
+                    });
+            
+                    $("#"+idVideodx).on('canplaythrough', function() {
+                        video_dx_canplay=true;
+                        console.log('I think I can play videodx');
+                    });
+                }
+                
+                
+                $("#"+idVideoToPlay).css("z-index", "1")
+                $("#"+idVideoToPlay).get(0).play()
+                setTimeout(SwitchStation, 5000,  idVideoToPlay, idPrevVideo2, idPrevVideo3, idPrevSection,idNewSection);
+            }
+            
+            else {
+                console.log("video  not ready,wait");
+                setTimeout(ButtonClicked, 1000, VideoCanPlay, videoTag1, videoTag2, videoTag3, idVideomid, idVideosx, idVideodx, idVideoToPlay, idPrevVideo2, idPrevVideo3, idPrevSection,idNewSection);
+            }
+    }
+
+    function button1Clicked () {
+            if (video_mid_canplay) {
+
+                video_mid_canplay=false;
+                
+                $(tagVideo2).appendTo("#next_video1");
+                $(tagVideo3).appendTo("#next_video2");
+                $(tagVideo4).appendTo("#next_video3");
+
+
+                $("#video2").on('canplaythrough', function() {
+                    video_mid_canplay=true;
+                    console.log('I think I can play videomid');
+                });
+                
+                $("#video3").on('canplaythrough', function() {
+                    video_sx_canplay=true;
+                    console.log('I think I can play videosx');
+                });
+
+                $("#video4").on('canplaythrough', function() {
+                    video_dx_canplay=true;
+                    console.log('I think I can play videodx');
+                });
+                
+                
+
+                $("#video1").css("z-index", "1")
+                $('#video1').get(0).play()
+                setTimeout(FromStartToSoggiorno,5000);
+            }
+
+            else {
+                console.log("video not ready,wait");
+                setTimeout(button1Clicked,1000);
+            }
     }
 
 
@@ -156,153 +303,18 @@
         $("#button_start_to_soggiorno").click(function(){
             if (video_mid_canplay) {
 
-                video_mid_canplay=false;
-                $(' <video id="video2" preload="auto"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
-                $("#video2").on('canplaythrough', function() {
-                    video_mid_canplay=true;
-                    console.log('I think I can play video2');
-                });
-                
-            
-                $(' <video id="video3" preload="auto"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
-                $("#video3").on('canplaythrough', function() {
-                    video_sx_canplay=true;
-                    console.log('I think I can play video3');
-                });
-
-                $(' <video id="video4" preload="auto"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
-                $("#video4").on('canplaythrough', function() {
-                    video_dx_canplay=true;
-                    console.log('I think I can play video4');
-                });
-                
-                
-                $("#video1").css("z-index", "1")
-                $('#video1').get(0).play()
-                setTimeout(FromStartToSoggiorno,5000);
-            }
-
-            else {
-                console.log("video 1 not ready");
-
-            }
-              
+                button1Clicked();
+            }       
         });
 
-
-
-        $("#button_soggiorno_to_sofa").click(function(){
-            if (video_mid_canplay) {
-                video_sx_canplay= false;
-                video_mid_canplay= false;
-                video_dx_canplay= false;
-            
-
-                if ($("#next_video1").html()){
-                    $(' <video id="video8" preload="auto"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
-                    $("#video8").on('canplaythrough', function() {
-                        video_mid_canplay=true;
-                        console.log('I think I can play video8');
-                    });
-            
-                    $(' <video id="video9" preload="auto"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
-                    $("#video9").on('canplaythrough', function() {
-                        video_sx_canplay=true;
-                        console.log('I think I can play video9');
-                    });
-            
-                    $(' <video id="video5" preload="auto"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
-                    $("#video5").on('canplaythrough', function() {
-                        video_dx_canplay=true;
-                        console.log('I think I can play video5');
-                    });
-                }
-                
-                else {
-                    $(' <video id="video8" preload="auto"> <source src="Assets/Video/VideoSequence8 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
-                    $("#video8").on('canplaythrough', function() {
-                        video_mid_canplay=true;
-                        console.log('I think I can play video8');
-                    });
-            
-                    $(' <video id="video9" preload="auto"> <source src="Assets/Video/VideoSequence9 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
-                    $("#video9").on('canplaythrough', function() {
-                        video_sx_canplay=true;
-                        console.log('I think I can play video9');
-                    });
-            
-                    $(' <video id="video5" preload="auto"> <source src="Assets/Video/VideoSequence5 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
-                    $("#video5").on('canplaythrough', function() {
-                        video_dx_canplay=true;
-                        console.log('I think I can play video5');
-                    });
-                }
-                
-                
-                $("#video2").css("z-index", "1")
-                $('#video2').get(0).play()
-                setTimeout(FromSoggiornoToSofa,5000);
-            }
-            else {
-                console.log("video 2 not ready");
-
-            }
-        });
+        
+        $("#button_soggiorno_to_sofa").click(function() {
+            ButtonClicked (video_mid_canplay, tagVideo8, tagVideo9, tagVideo5, idVideo8, idVideo9, idVideo5, idVideo2,idVideo3,idVideo4,idStationSoggiorno,idStationSofa);
+        });   
             
 
         $("#button_sofa_to_kitchen").click(function(){
-            if (video_mid_canplay) {
-                video_sx_canplay= false;
-                video_mid_canplay= false;
-                video_dx_canplay= false;
-                if ($("#next_video1").html()){
-                    $(' <video id="video11" preload="auto"> <source src="Assets/Video/VideoSequence11 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video4");
-                    $("#video11").on('canplaythrough', function() {
-                        video_mid_canplay=true;
-                        console.log('I think I can play video11');
-                    });
-            
-                    $(' <video id="video12" preload="auto"> <source src="Assets/Video/VideoSequence12 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video5");
-                    $("#video12").on('canplaythrough', function() {
-                        video_dx_canplay=true;
-                        console.log('I think I can play video12');
-                    });
-            
-                    $(' <video id="video13" preload="auto"> <source src="Assets/Video/VideoSequence13 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video6");
-                    $("#video13").on('canplaythrough', function() {
-                        video_sx_canplay=true;
-                        console.log('I think I can play video13');
-                    });
-                }
-                
-                else {
-                    $(' <video id="video11" preload="auto"> <source src="Assets/Video/VideoSequence11 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
-                    $("#video11").on('canplaythrough', function() {
-                        video_mid_canplay=true;
-                        console.log('I think I can play video11');
-                    });
-            
-                    $(' <video id="video12" preload="auto"> <source src="Assets/Video/VideoSequence12 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
-                    $("#video12").on('canplaythrough', function() {
-                        video_dx_canplay=true;
-                        console.log('I think I can play video12');
-                    });
-            
-                    $(' <video id="video13" preload="auto"> <source src="Assets/Video/VideoSequence13 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
-                    $("#video13").on('canplaythrough', function() {
-                        video_sx_canplay=true;
-                        console.log('I think I can play video13');
-                    });
-                }
-                $("#video8").css("z-index", "1")
-                $('#video8').get(0).play()
-                setTimeout(FromSofaToCucina,5000);
-            }
-            else {
-                console.log("video 8 not ready");
-            }
-        
-        
+            ButtonClicked(video_mid_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo12, idVideo13, idVideo8, idVideo9,idVideo5, idStationSofa, idStationCucina);
         });
 
     
