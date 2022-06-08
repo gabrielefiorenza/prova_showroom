@@ -144,8 +144,8 @@
             </button>
             
             
-            <button id="button_sink_to_cucina">
-                Go to the kitchen
+            <button id="button_sink_to_mistery">
+                ???
             </button>
             
             
@@ -167,8 +167,8 @@
             </button>
             
             
-            <button id="button_stove_to_cucina">
-                Go to the kitchen
+            <button id="button_stove_to_mistery">
+                ???
             </button>
             
             
@@ -190,8 +190,8 @@
             </button>
             
             
-            <button id="button_table_to_cucina">
-                Go to the kitchen
+            <button id="button_table_to_mistery">
+                 ???
             </button>
             
             
@@ -476,7 +476,7 @@
             ButtonClicked(video_dx_canplay, tagVideo18, tagVideo10, tagVideo19, idVideo19, idVideo18, idVideo10, idVideo7, idVideo6,idVideo5, idStationTV, idStationBookShelver);
         });
 
-        $("#button_TV_to_kitchen").click(function(){
+        $("#button_TV_to_cucina").click(function(){
             ButtonClicked(video_sx_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo13, idVideo12, idVideo6, idVideo5,idVideo7, idStationTV, idStationCucina);
         });
 
@@ -499,20 +499,46 @@
        
 
         $("#button_cucina_to_table").click(function(){
-            ButtonClicked(video_sx_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo13, idVideo12, idVideo10, idVideo18,idVideo19, idStationBookShelver, idStationCucina);
+            ButtonClicked(video_sx_canplay, tagVideo21, tagVideo22, tagVideo1, idVideo21, idVideo1, idVideo22, idVideo13, idVideo12,idVideo11, idStationCucina, idStationTable);
         });
 
         $("#button_cucina_to_sink").click(function(){
-            ButtonClicked(video_mid_canplay, tagVideo8, tagVideo9, tagVideo17, idVideo8, idVideo9, idVideo17, idVideo18, idVideo10,idVideo19, idStationBookShelver, idStationSofa);
+            ButtonClicked(video_mid_canplay, tagVideo15, tagVideo14, tagVideo1, idVideo15, idVideo1, idVideo14, idVideo11, idVideo12,idVideo13, idStationCucina, idStationSink);
         });
 
         $("#button_cucina_to_stove").click(function(){
-            ButtonClicked(video_dx_canplay, tagVideo5, tagVideo6, tagVideo7, idVideo5, idVideo6, idVideo7, idVideo19, idVideo10,idVideo18, idStationBookShelver, idStationTV);
+            ButtonClicked(video_dx_canplay, tagVideo1, tagVideo20, tagVideo16, idVideo1, idVideo16, idVideo20, idVideo12, idVideo11,idVideo13, idStationCucina, idStationStove);
         });
         
+        
+        
+        $("#button_stove_to_table").click(function(){
+            ButtonClicked(video_mid_canplay, tagVideo21, tagVideo22, tagVideo1, idVideo21, idVideo1, idVideo22, idVideo16, idVideo20,idVideo1, idStationStove, idStationTable);
+        });
+
+        $("#button_stove_to_sink").click(function(){
+            ButtonClicked(video_dx_canplay, tagVideo15, tagVideo14, tagVideo1, idVideo15, idVideo1, idVideo14, idVideo20, idVideo16,idVideo1, idStationStove, idStationSink);
+        });
     
-    
-    
+        
+        $("#button_table_to_sink").click(function(){
+            ButtonClicked(video_mid_canplay, tagVideo15, tagVideo14, tagVideo1, idVideo15, idVideo1, idVideo14, idVideo22, idVideo21,idVideo1, idStationTable, idStationSink);
+        });
+        $("#button_table_to_stove").click(function(){
+            ButtonClicked(video_sx_canplay, tagVideo1, tagVideo20, tagVideo16, idVideo1, idVideo16, idVideo20, idVideo21, idVideo22,idVideo1, idStationTable, idStationStove);
+        });
+
+
+
+        $("#button_sink_to_stove").click(function(){
+            ButtonClicked(video_dx_canplay, tagVideo1, tagVideo20, tagVideo16, idVideo1, idVideo16, idVideo20, idVideo14, idVideo15,idVideo1, idStationSink, idStationStove);
+        });
+
+        $("#button_sink_to_table").click(function(){
+            ButtonClicked(video_mid_canplay, tagVideo21, tagVideo22, tagVideo1, idVideo21, idVideo1, idVideo22, idVideo15, idVideo14,idVideo1, idStationSink, idStationTable);
+        });
+
+
     });
     </script> 
 </html>

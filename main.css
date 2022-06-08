@@ -485,7 +485,7 @@ video {
 
 
 
-#button_sink_to_cucina{
+#button_sink_to_mistery{
   opacity: 0.9;
   position: fixed;
   bottom: 70%;
@@ -500,7 +500,7 @@ video {
 
 }
 
-#button_sink_to_cucina button {
+#button_sink_to_mistery button {
   width: 100px;
   height: 100px;
 }
@@ -511,7 +511,7 @@ video {
   opacity: 0.9;
   position: fixed;
   bottom: 80%;
-  right: 20%;
+  right: 10%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -565,7 +565,7 @@ video {
 
 
 
-#button_stove_to_cucina{
+#button_stove_to_mistery{
   opacity: 0.9;
   position: fixed;
   bottom: 70%;
@@ -580,7 +580,7 @@ video {
 
 }
 
-#button_stove_to_cucina button {
+#button_stove_to_mistery button {
   width: 100px;
   height: 100px;
 }
@@ -591,7 +591,7 @@ video {
   opacity: 0.9;
   position: fixed;
   bottom: 80%;
-  right: 20%;
+  right: 10%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -628,7 +628,7 @@ video {
   opacity: 0.9;
   position: fixed;
   bottom: 70%;
-  left: 20%;
+  left: 10%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -646,7 +646,7 @@ video {
 
 
 
-#button_table_to_cucina{
+#button_table_to_mistery{
   opacity: 0.9;
   position: fixed;
   bottom: 70%;
@@ -661,7 +661,7 @@ video {
 
 }
 
-#button_table_to_cucina button {
+#button_table_to_mistery button {
   width: 100px;
   height: 100px;
 }
