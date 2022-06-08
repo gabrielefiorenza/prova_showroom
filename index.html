@@ -110,12 +110,15 @@
 
 </body>
 
-<script> 
-    const video = document.querySelector('#video1');
+<script>
 
-    video.addEventListener('canplaythrough', (event) => {
-        console.log('I think I can play through the entire ' +
-      'video without ever having to stop to buffer.');
+    var video_sx_canplay= false;
+    var video_mid_canplay= false;
+    var video_dx_canplay= false;
+
+    $("#video1").on('canplaythrough', function() {
+        video_mid_canplay=true;
+        console.log('I think I can play video 1');
     });
 
     function FromStartToSoggiorno() {
@@ -149,26 +152,43 @@
         $("#cucina").hide()
 
         $("#button_start_to_soggiorno").click(function(){
-            
-            //$.get("Assets/Video/VideoSequence2 1080p.mp4", function(){//
-            $(' <video id="video2" preload="auto"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
-            
-            //});//
-           
-            //$.get("Assets/Video/VideoSequence3 1080p.mp4", function(){//
-            $(' <video id="video3" preload="auto"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
-           
-            //});//
+            if (video_mid_canplay) {
 
-            //$.get("Assets/Video/VideoSequence4 1080p.mp4", function(){//
-            $(' <video id="video4" preload="auto"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
-          
-            //});//
+                video_mid_canplay=false;
+                //$.get("Assets/Video/VideoSequence2 1080p.mp4", function(){//
+                $(' <video id="video2" preload="auto"> <source src="Assets/Video/VideoSequence2 1080p.mp4" type="video/mp4"></video> ').appendTo("#next_video1");
+                //});//
+                $("#video2").on('canplaythrough', function() {
+                    video_mid_canplay=true;
+                    console.log('I think I can play video2');
+                });
+                
             
-            
-            $("#video1").css("z-index", "1")
-            $('#video1').get(0).play()
-            setTimeout(FromStartToSoggiorno,5000);
+                //$.get("Assets/Video/VideoSequence3 1080p.mp4", function(){//
+                $(' <video id="video3" preload="auto"> <source src="Assets/Video/VideoSequence3 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video2");
+                //});//
+                $("#video3").on('canplaythrough', function() {
+                    video_sx_canplay=true;
+                    console.log('I think I can play video3');
+                });
+
+                //$.get("Assets/Video/VideoSequence4 1080p.mp4", function(){//
+                $(' <video id="video4" preload="auto"> <source src="Assets/Video/VideoSequence4 1080p.mp4" type="video/mp4"></video>  ').appendTo("#next_video3");
+                //});//
+                $("#video4").on('canplaythrough', function() {
+                    video_dx_canplay=true;
+                    console.log('I think I can play video4');
+                });
+                
+                
+                $("#video1").css("z-index", "1")
+                $('#video1').get(0).play()
+                setTimeout(FromStartToSoggiorno,5000);
+            }
+
+            else {
+                console.log("video 1 not ready");
+            }
               
         });
 
