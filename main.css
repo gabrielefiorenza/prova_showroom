@@ -38,8 +38,8 @@ video {
 #button_start_to_soggiorno{
   opacity: 0.9;
   position: fixed;
-  bottom: 500px;
-  left: 700px;
+  bottom: 50%;
+  left: 50%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -60,8 +60,8 @@ video {
 #button_soggiorno_to_sofa{
   opacity: 0.9;
   position: fixed;
-  bottom: 250px;
-  left: 800px;
+  bottom: 20%;
+  left: 70%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -82,8 +82,8 @@ video {
 #button_soggiorno_to_TV{
   opacity: 0.9;
   position: fixed;
-  bottom: 400px;
-  left: 300px;
+  bottom: 40%;
+  left: 30%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -106,8 +106,8 @@ video {
 #button_soggiorno_to_book{
   opacity: 0.9;
   position: fixed;
-  bottom: 600px;
-  right: 600px;
+  bottom: 80%;
+  right: 40%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -128,8 +128,8 @@ video {
 #button_sofa_to_kitchen{
   opacity: 0.9;
   position: fixed;
-  bottom: 600px;
-  right: 800px;
+  bottom: 80%;
+  right: 60%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -150,8 +150,8 @@ video {
 #button_sofa_to_book{
   opacity: 0.9;
   position: fixed;
-  bottom: 200px;
-  left: 200px;
+  bottom: 20%;
+  left: 20%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -172,8 +172,8 @@ video {
 #button_sofa_to_TV{
   opacity: 0.9;
   position: fixed;
-  bottom: 200px;
-  right: 200px;
+  bottom: 20%;
+  right: 10%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -224,8 +224,8 @@ video {
 #button_cucina_to_stove{
   opacity: 0.9;
   position: fixed;
-  bottom: 200px;
-  right: 200px;
+  bottom: 25%;
+  right: 20%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -246,8 +246,8 @@ video {
 #button_cucina_to_sink{
   opacity: 0.9;
   position: fixed;
-  bottom: 300px;
-  left: 650px;
+  bottom: 50%;
+  left: 60%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -268,8 +268,8 @@ video {
 #button_cucina_to_table{
   opacity: 0.9;
   position: fixed;
-  bottom: 200px;
-  left: 400px;
+  bottom: 30%;
+  left: 30%;
   align-items: center;
   display: flex;
   height: 10%;
@@ -288,6 +288,409 @@ video {
 
 
 #box_info_cucina {
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: aliceblue;
+  opacity: 0.9;
+  border-radius: 4px;
+  z-index: 0;
+  position: fixed;
+  bottom: 400px;
+  right: 100px;
+}
+
+#button_TV_to_cucina{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 80%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(133, 116, 116);
+  border-radius: 4px;
+
+}
+
+#button_TV_to_cucina button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_TV_to_book{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 30%;
+  right: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(185, 50, 50);
+  border-radius: 4px;
+
+}
+
+#button_TV_to_book button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_TV_to_sofa{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 20%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 4px;
+
+}
+
+#button_TV_to_sofa button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#box_info_TV {
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: aliceblue;
+  opacity: 0.9;
+  border-radius: 4px;
+  z-index: 0;
+  position: fixed;
+  bottom: 400px;
+  right: 100px;
+}
+
+
+#button_book_shelver_to_cucina{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 80%;
+  right: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(133, 116, 116);
+  border-radius: 4px;
+
+}
+
+#button_book_shelver_to_cucina button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_book_shelver_to_TV{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 70%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(185, 50, 50);
+  border-radius: 4px;
+
+}
+
+#button_book_shelver_to_TV button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_book_shelver_to_sofa{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 20%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 4px;
+
+}
+
+#button_book_shelver_to_sofa button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#box_info_book_shelver {
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: aliceblue;
+  opacity: 0.9;
+  border-radius: 4px;
+  z-index: 0;
+  position: fixed;
+  bottom: 400px;
+  right: 100px;
+}
+
+
+#button_sink_to_table{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 20%;
+  right: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(133, 116, 116);
+  border-radius: 4px;
+
+}
+
+#button_sink_to_table button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_sink_to_cucina{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 70%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(185, 50, 50);
+  border-radius: 4px;
+
+}
+
+#button_sink_to_cucina button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_sink_to_stove{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 80%;
+  right: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 4px;
+
+}
+
+#button_sink_to_stove button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#box_info_sink {
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: aliceblue;
+  opacity: 0.9;
+  border-radius: 4px;
+  z-index: 0;
+  position: fixed;
+  bottom: 400px;
+  right: 100px;
+}
+
+#button_stove_to_table{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 20%;
+  right: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(133, 116, 116);
+  border-radius: 4px;
+
+}
+
+#button_stove_to_table button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_stove_to_cucina{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 70%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(185, 50, 50);
+  border-radius: 4px;
+
+}
+
+#button_stove_to_cucina button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_stove_to_sink{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 80%;
+  right: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 4px;
+
+}
+
+#button_stove_to_sink button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#box_info_stove {
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: aliceblue;
+  opacity: 0.9;
+  border-radius: 4px;
+  z-index: 0;
+  position: fixed;
+  bottom: 400px;
+  right: 100px;
+}
+
+
+#button_table_to_stove{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 70%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(133, 116, 116);
+  border-radius: 4px;
+
+}
+
+#button_table_to_stove button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_table_to_cucina{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 70%;
+  left: 50%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: rgb(185, 50, 50);
+  border-radius: 4px;
+
+}
+
+#button_table_to_cucina button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#button_table_to_sink{
+  opacity: 0.9;
+  position: fixed;
+  bottom: 30%;
+  left: 20%;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  z-index: 0;
+  justify-content: center;
+  background-color: beige;
+  border-radius: 4px;
+
+}
+
+#button_table_to_sink button {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#box_info_table {
   width: 320px;
   padding: 10px;
   border: 2px solid gray;

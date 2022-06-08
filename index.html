@@ -67,6 +67,52 @@
             
         </div>
         
+        <div id="TV">
+            <img id="frame_TV" src="Assets\Frames\FrameTV.webp">
+            
+            <button id="button_TV_to_cucina">
+                Go to the kitchen
+            </button>
+            
+            
+            <button id="button_TV_to_book">
+                Go to the book shelving
+            </button>
+            
+            
+            <button id="button_TV_to_sofa">
+                Go to the sofa
+            </button>
+
+            <div id="box_info_TV">
+                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+            </div>
+            
+        </div>
+
+        <div id="book_shelver">
+            <img id="frame_book_shelver" src="Assets\Frames\FrameBookShelver.webp">
+            
+            <button id="button_book_shelver_to_cucina">
+                Go to the kitchen
+            </button>
+            
+            
+            <button id="button_book_shelver_to_TV">
+                Go to the TV
+            </button>
+            
+            
+            <button id="button_book_shelver_to_sofa">
+                Go to the sofa
+            </button>
+
+            <div id="box_info_book_shelver">
+                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+            </div>
+            
+        </div>
+        
         <div id="cucina">
             <img id="frame_cucina" src="Assets\Frames\FrameCucina.webp">
             
@@ -90,6 +136,76 @@
             
         </div>
 
+        <div id="sink">
+            <img id="frame_sink" src="Assets\Frames\FrameSink.webp">
+            
+            <button id="button_sink_to_table">
+                Go to the table
+            </button>
+            
+            
+            <button id="button_sink_to_cucina">
+                Go to the kitchen
+            </button>
+            
+            
+            <button id="button_sink_to_stove">
+                Go to the stove
+            </button>
+
+            <div id="box_info_sink">
+                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+            </div>
+            
+        </div>
+
+        <div id="stove">
+            <img id="frame_stove" src="Assets\Frames\FrameStove.webp">
+            
+            <button id="button_stove_to_table">
+                Go to the table
+            </button>
+            
+            
+            <button id="button_stove_to_cucina">
+                Go to the kitchen
+            </button>
+            
+            
+            <button id="button_stove_to_sink">
+                Go to the sink
+            </button>
+
+            <div id="box_info_stove">
+                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+            </div>
+            
+        </div>
+
+        <div id="table">
+            <img id="frame_table" src="Assets\Frames\FrameTable.webp">
+            
+            <button id="button_table_to_stove">
+                Go to the stove
+            </button>
+            
+            
+            <button id="button_table_to_cucina">
+                Go to the kitchen
+            </button>
+            
+            
+            <button id="button_table_to_sink">
+                Go to the sink
+            </button>
+
+            <div id="box_info_table">
+                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+            </div>
+            
+        </div>
+
+        
 
         <!--Next Video Containers-->
         <video id="video1" preload="auto"> <source src="Assets\Video\VideoSequence1 1080p.mp4" type="video/mp4"></video>
@@ -174,6 +290,23 @@
         $("#soggiorno").show();
             
     }
+    
+    
+//    var video=document.getElementById("video1");
+//    video.currentTime=4
+//   function playBackwards() {
+//        var fps = 30;
+//      var intervalRewind = setInterval(function() {
+//      if(video.currentTime == 0){
+//         clearInterval(intervalRewind);
+//         video.pause();
+//      }
+//      else {
+//          video.currentTime += -(1/fps);
+//      }
+//      }, 1000 / fps);
+//  }
+
 
     
     function SwitchStation(video1, video2,video3,station1,station2){
@@ -227,7 +360,7 @@
 
                     $("#"+idVideomid).on('canplaythrough', function() {
                         video_mid_canplay=true;
-                        console.log('I think I can play video mic');
+                        console.log('I think I can play video mid');
                     });
             
                     $("#"+idVideosx).on('canplaythrough', function() {
@@ -297,17 +430,20 @@
         $("#soggiorno").hide()
         $("#sofa").hide()
         $("#cucina").hide()
-
+        $("#TV").hide()
+        $("#book_shelver").hide()
+        $("#sink").hide()
+        $("#stove").hide()
+        $("#table").hide()
+      
 
 
         $("#button_start_to_soggiorno").click(function(){
-            if (video_mid_canplay) {
-
-                button1Clicked();
-            }       
+            button1Clicked();
+ //           playBackwards();      
         });
 
-        
+
         $("#button_soggiorno_to_sofa").click(function() {
             ButtonClicked (video_mid_canplay, tagVideo8, tagVideo9, tagVideo5, idVideo8, idVideo9, idVideo5, idVideo2,idVideo3,idVideo4,idStationSoggiorno,idStationSofa);
         });   
@@ -317,6 +453,13 @@
             ButtonClicked(video_mid_canplay, tagVideo11, tagVideo12, tagVideo13, idVideo11, idVideo12, idVideo13, idVideo8, idVideo9,idVideo5, idStationSofa, idStationCucina);
         });
 
+        $("#button_soggiorno_to_TV").click(function(){
+            ButtonClicked(video_sx_canplay, tagVideo5, tagVideo6, tagVideo7, idVideo5, idVideo6, idVideo7, idVideo3, idVideo2,idVideo4, idStationSoggiorno, idStationTV);
+        });
+        
+        $("#button_soggiorno_to_book").click(function(){
+            ButtonClicked(video_dx_canplay, tagVideo9, tagVideo7, tagVideo10, idVideo9, idVideo7, idVideo10, idVideo4, idVideo2,idVideo3, idStationSoggiorno, idStationBookShelver);
+        });
     
     
     
