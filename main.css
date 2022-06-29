@@ -211,7 +211,8 @@ video {
 
 
 #box_info_soggiorno {
-  width: 320px;
+  width: 30%;
+  height: 15%;
   padding: 10px;
   border: 2px solid gray;
   margin: 0;
