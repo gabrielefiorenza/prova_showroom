@@ -211,8 +211,7 @@ video {
 
 
 #box_info_soggiorno {
-  width: 30%;
-  height: 15%;
+  width: 320px;
   padding: 10px;
   border: 2px solid gray;
   margin: 0;
@@ -221,8 +220,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 40%;
-  right: 20%;
+  bottom: 400px;
+  right: 200px;
 }
 
 
@@ -236,8 +235,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 70%;
-  right: 10%;
+  bottom: 700px;
+  right: 100px;
 }
 
 
@@ -317,8 +316,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 70%;
-  right: 40%;
+  bottom: 700px;
+  right: 400px;
 }
 
 #button_TV_to_cucina{
@@ -416,8 +415,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 70%;
-  right: 5%;
+  bottom: 700px;
+  right: 50px;
 }
 
 
@@ -517,8 +516,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 40%;
-  right: 5%;
+  bottom: 400px;
+  right: 50px;
 }
 
 
@@ -617,8 +616,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 40%;
-  right: 10%;
+  bottom: 400px;
+  right: 100px;
 }
 
 #button_stove_to_table{
@@ -697,8 +696,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 70%;
-  right: 40%;
+  bottom: 700px;
+  right: 400px;
 }
 
 
@@ -778,8 +777,8 @@ video {
   border-radius: 4px;
   z-index: 0;
   position: fixed;
-  bottom: 70%;
-  right: 20%;
+  bottom: 700px;
+  right: 200px;
 }
 
 
