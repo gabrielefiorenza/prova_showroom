@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="main.css">
     <title>Prova Showroom</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
@@ -15,8 +16,8 @@
         <div id="start">
             <img class="background_station" id="frame_start" src="Assets\Frames\FrameStart.webp">
             
-            <button id="button_start_to_soggiorno">
-                Go to the Living Room
+            <button type="button" class="btn btn-primary" id="button_start_to_soggiorno">
+                Vai al soggiorno
             </button>
 
 
@@ -26,22 +27,22 @@
         
         <div id="soggiorno">
             <img class="background_station" id="frame_soggiorno" src="Assets\Frames\FrameSoggiorno.webp">
-            <button id="button_soggiorno_to_sofa">
-                Go to the sofa
+            <button type="button" class="btn btn-primary" id="button_soggiorno_to_sofa">
+                Vai al divano
             </button>
             
             
-            <button id="button_soggiorno_to_TV">
-                Go to the TV
+            <button type="button" class="btn btn-secondary" id="button_soggiorno_to_TV">
+                Vai alla TV
             </button>
             
             
-            <button id="button_soggiorno_to_book">
-                Go to book shelving
+            <button type="button" class="btn btn-info" id="button_soggiorno_to_book">
+                Vai alla libreria
             </button>
 
             <div id="box_info_soggiorno">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.
             </div>
             
         </div>
@@ -51,60 +52,55 @@
         <div id="sofa">
             <img class="background_station" id="frame_sofa" src="Assets\Frames\FrameSofa.webp">
             
-            <button id="button_sofa_to_kitchen">
-                Go to the kitchen
+            <button type="button" class="btn btn-primary" id="button_sofa_to_kitchen">
+                Vai alla cucina
             </button>
             
             
-            <button id="button_sofa_to_book">
-                Go to the book shelving
+            <button type="button" class="btn btn-secondary" id="button_sofa_to_book">
+                Vai agli scaffali
             </button>
             
             
-            <button id="button_sofa_to_TV">
-                Go to the TV
+            <button type="button" class="btn btn-info" id="button_sofa_to_TV">
+                Vai alla TV
             </button>
 
-            <button id="button_sofa_to_divano_colours">
+            <button type="button" class="btn btn-warning" id="button_sofa_to_divano_colours">
                 Cambia colore al divano
             </button>
 
             <div id="box_info_sofa">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.
             </div>
             
         </div>
 
-        <div id="divano_colours">
-            <img id="frame_sofa" src="Assets\Frames\FrameDivano base.png">
-            
-            
-            
-        </div>
+        
         
         <div id="TV">
             <img class="background_station" id="frame_TV" src="Assets\Frames\FrameTV.webp">
             
-            <button id="button_TV_to_cucina">
-                Go to the kitchen
+            <button type="button" class="btn btn-primary" id="button_TV_to_cucina">
+                Vai alla cucina
             </button>
             
             
-            <button id="button_TV_to_book">
-                Go to the book shelving
+            <button type="button" class="btn btn-secondary" id="button_TV_to_book">
+                Vai agli scaffali
             </button>
             
             
-            <button id="button_TV_to_sofa">
-                Go to the sofa
+            <button type="button" class="btn btn-info" id="button_TV_to_sofa">
+                Vai al divano
             </button>
 
-            <button id="button_scarpa">
+            <button type="button" class="btn btn-warning" id="button_scarpa">
                 Guarda da vicino la scarpa
             </button>
 
             <div id="box_info_TV">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.
             </div>
             
         </div>
@@ -112,26 +108,26 @@
         <div id="book_shelver">
             <img class="background_station" id="frame_book_shelver" src="Assets\Frames\FrameBookShelver.webp">
             
-            <button id="button_book_shelver_to_cucina">
-                Go to the kitchen
+            <button type="button" class="btn btn-primary" id="button_book_shelver_to_cucina">
+                Vai alla cucina
             </button>
             
             
-            <button id="button_book_shelver_to_TV">
-                Go to the TV
+            <button type="button" class="btn btn-secondary" id="button_book_shelver_to_TV">
+                Vai alla TV
             </button>
             
             
-            <button id="button_book_shelver_to_sofa">
-                Go to the sofa
+            <button type="button" class="btn btn-info" id="button_book_shelver_to_sofa">
+                Vai al divano
             </button>
 
-            <button id="button_headset" >
+            <button type="button" class="btn btn-warning" id="button_headset" >
                 Vedi il visore VR da vicino
             </button>
 
             <div id="box_info_book_shelver">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.
             </div>
             
         </div>
@@ -139,22 +135,22 @@
         <div id="cucina">
             <img class="background_station" id="frame_cucina" src="Assets\Frames\FrameCucina.webp">
             
-            <button id="button_cucina_to_sink">
-                Go to the sink
+            <button type="button" class="btn btn-primary" id="button_cucina_to_sink">
+                Vai al lavandino
             </button>
             
             
-            <button id="button_cucina_to_table">
-                Go to the table
+            <button type="button" class="btn btn-secondary" id="button_cucina_to_table">
+                Vai al tavolo
             </button>
             
             
-            <button id="button_cucina_to_stove">
-                Go to the stove
+            <button type="button" class="btn btn-info" id="button_cucina_to_stove">
+                Vai ai fornelli
             </button>
 
             <div id="box_info_cucina">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.
             </div>
 
             <!--
@@ -199,18 +195,18 @@
         <div id="sink">
             <img class="background_station" id="frame_sink" src="Assets\Frames\FrameSink.webp">
             
-            <button id="button_sink_to_table">
-                Go to the table
+            <button type="button" class="btn btn-primary" id="button_sink_to_table">
+                Vai al tavolo
             </button>
             
-            
+            <!--
             <button id="button_sink_to_mistery">
                 ???
             </button>
+            -->
             
-            
-            <button id="button_sink_to_stove">
-                Go to the stove
+            <button type="button" class="btn btn-secondary" id="button_sink_to_stove">
+                Vai ai fornelli
             </button>
 
             <button id="button_vaso">
@@ -218,7 +214,7 @@
             </button>
 
             <div id="box_info_sink">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.
             </div>
             
         </div>
@@ -226,45 +222,44 @@
         <div id="stove">
             <img class="background_station" id="frame_stove" src="Assets\Frames\FrameStove.webp">
             
-            <button id="button_stove_to_table">
-                Go to the table
+            <button type="button" class="btn btn-primary" id="button_stove_to_table">
+               Vai al tavolo
             </button>
             
-            
+            <!--
             <button id="button_stove_to_mistery">
                 ???
             </button>
+            -->
             
-            
-            <button id="button_stove_to_sink">
-                Go to the sink
+            <button type="button" class="btn btn-secondary" id="button_stove_to_sink">
+                Vai al lavandino
             </button>
 
             <div id="box_info_stove">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
-            </div>
-            
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.            
+            </div>  
         </div>
 
         <div id="table">
             <img class="background_station" id="frame_table" src="Assets\Frames\FrameTable.webp">
             
-            <button id="button_table_to_stove">
-                Go to the stove
+            <button type="button" class="btn btn-primary" id="button_table_to_stove">
+                Vai ai fornelli
             </button>
             
-            
+            <!--
             <button id="button_table_to_mistery">
                  ???
             </button>
+            -->
             
-            
-            <button id="button_table_to_sink">
-                Go to the sink
+            <button type="button" class="btn btn-secondary" id="button_table_to_sink">
+                Vai al lavandino
             </button>
 
             <div id="box_info_table">
-                This beautiful set is the perfect piece to reflect your regal tastes, this living room set anchors your seating ensemble in timeless appeal. Daedalus XR fabric upholstery brings out this set glamorous side, while exquisite details include high-density foam fill.
+                Questo bellissimo set è il pezzo perfetto per rispecchiare i vostri gusti regali, questo set da salotto ancorerà il vostro ensemble di sedute in un fascino senza tempo. Il rivestimento in tessuto Daedalus XR esalta il lato glamour di questo set, mentre i dettagli più raffinati includono l'imbottitura in schiuma ad alta densità.
             </div>
             
         </div>
@@ -277,8 +272,8 @@
             <img class="background_station" id="frame_divano_blu" src="Assets\Frames\FrameDivano-Azzurro.webp">
             <img class="background_station" id="frame_divano_rosso" src="Assets\Frames\FrameDivano-Rosso.webp">
 
-            <button id="button_divano_to_sofa">
-                Exit the configurator
+            <button type="button" class="btn btn-primary" id="button_divano_to_sofa">
+                Torna al salotto
             </button>
             
             <button id="dot_green">
@@ -322,7 +317,9 @@
         
     </div>   
     
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </body>
